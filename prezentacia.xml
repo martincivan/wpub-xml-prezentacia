@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="styl.xsl"?>
+<prezentacia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xtml="http://www.w3.org/1999/xhtml"
+             xsi:noNamespaceSchemaLocation="prezentacia.xsd">
+    <nadpis>Vzorová prezentácia</nadpis>
+    <podnadpis>Alebo čo sa mi podarilo vytvoriť z XML-ka</podnadpis>
+    <autor>Martin Civáň</autor>
+
+    <slajdy>
+        <slajd nazov="prvy">
+            <div>
+                asdasfasf
+                <ul>
+                    <li>asd</li>
+                    <li>fgh</li>
+                </ul>
+                asdasdassafgdsfsgf
+            </div>
+        </slajd>
+        <slajd nazov="druhy">
+            <xtml:ul>
+                <xtml:li>asd</xtml:li>
+                <xtml:li>fgh</xtml:li>
+            </xtml:ul>
+        </slajd>
+        <slajd nazov="treti">
+            <xtml:ul>
+                <xtml:li>asd</xtml:li>
+                <xtml:li>fgh</xtml:li>
+            </xtml:ul>
+        </slajd>
+    </slajdy>
+</prezentacia>

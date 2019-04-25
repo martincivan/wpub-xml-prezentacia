@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd" />
+    <xs:element name="prezentacia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nadpis" type="xs:string"/>
+                <xs:element name="podnadpis" type="xs:string"/>
+                <xs:element name="autor" type="xs:string"/>
+                <xs:element name="slajdy" type="slajdy"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="slajdy">
+        <xs:sequence>
+            <xs:element name="slajd" type="slajd" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="slajd">
+        <xs:sequence>
+            <xs:element name="nadpis" type="xs:string" minOccurs="0"/>
+            <xs:any namespace="http://www.w3.org/1999/xhtml"
+                    minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="nazov" type="xs:string"/>
+    </xs:complexType>
+
+</xs:schema>
