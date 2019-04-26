@@ -1,33 +1,40 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="styl.xsl"?>
-<prezentacia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xtml="http://www.w3.org/1999/xhtml"
+<prezentacia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:noNamespaceSchemaLocation="prezentacia.xsd">
     <nadpis>Vzorová prezentácia</nadpis>
     <podnadpis>Alebo čo sa mi podarilo vytvoriť z XML-ka</podnadpis>
     <autor>Martin Civáň</autor>
 
     <slajdy>
-        <slajd nazov="prvy">
-            <div>
-                asdasfasf
-                <ul>
-                    <li>asd</li>
-                    <li>fgh</li>
-                </ul>
-                asdasdassafgdsfsgf
-            </div>
+        <slajd nazov="Ako vytvoriť takúto prezentáciu?">
+            <obrazok kde="otazik.jpg">Veľký červený otáznik</obrazok>
         </slajd>
-        <slajd nazov="druhy">
-            <xtml:ul>
-                <xtml:li>asd</xtml:li>
-                <xtml:li>fgh</xtml:li>
-            </xtml:ul>
+        <slajd nazov="Je to také jednoduché">
+            <zoznam cislovany="true">
+                <polozka>Napísať dokument v XML</polozka>
+                <polozka>Napísať šablónu v XSL</polozka>
+                <polozka>Prehnať to celé cez SAXON alebo XEP</polozka>
+                <polozka>Voila!</polozka>
+            </zoznam>
         </slajd>
-        <slajd nazov="treti">
-            <xtml:ul>
-                <xtml:li>asd</xtml:li>
-                <xtml:li>fgh</xtml:li>
-            </xtml:ul>
+        <slajd nazov="A z čoho všetkého to dokáže vyrobiť slajd?">
+            Zo všetkého možného!
+            <zoznam cislovany="true">
+                <polozka>Z číslovaného zoznamu</polozka>
+                <polozka>Z nečíslovaného zoznamu</polozka>
+                <polozka>Z obrázku s popisom</polozka>
+            </zoznam>
+            <zoznam>
+                <polozka>A samozrejme nechýba aj možnosť kombinácie.</polozka>
+                <polozka>No veľký obrázok by to mohol trošku rozbiť.</polozka>
+            </zoznam>
+            A keď do toho celého pridám text, nič sa nepokazí!
+        </slajd>
+        <slajd nazov="Samý text">
+                Pre milovníkov veľmi dlhých textov v prezentáciach nechýba ani možnosť kompletne celý slajd zaplniť absolútne
+                neštruktúrovaným siahodlhým nudným textom na bielom pozadi. Do slajdu sa zmestí naozaj veľa textu.
+            Je to priam neuveriteľné ale je to tak. Tento text je tu samozrejme len na ukážku a nikto by si z neho nemal brať príklad.
         </slajd>
     </slajdy>
 </prezentacia>

@@ -15,7 +15,7 @@
             <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
             <html>
                 <head>
-                    <link rel="stylesheet" href="styl.css" type="text/css"/>
+                    <link rel="stylesheet" href="styl.css"/>
                     <link rel="stylesheet"
                           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
                           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -149,7 +149,11 @@
                         <h1>
                             <xsl:value-of select="@nazov"/>
                         </h1>
-                        <xsl:copy-of select="child::*"/>
+                    <div class="nastred">
+                        <div>
+                        <xsl:apply-templates/>
+                        </div>
+                    </div>
                         <footer class="container fixed-bottom bg-dark">
                             <a href="{count(preceding-sibling::slajd)}.html" class="float-left">Naspäť</a>
                             <a href="{count(preceding-sibling::slajd) + 2}.html" class="float-right">Ďalej</a>
@@ -158,6 +162,32 @@
                 </body>
             </html>
         </xsl:result-document>
+    </xsl:template>
+
+    <xsl:template match="obrazok">
+        <figure class="w-100 text-center">
+            <img src="{@kde}" alt="{text()}" style="max-height:50vh;max-width:50vh;" />
+            <figcaption>
+                <xsl:value-of select="text()"/></figcaption>
+        </figure>
+    </xsl:template>
+
+    <xsl:template match="polozka">
+        <li>
+            <xsl:value-of select="."/>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="zoznam[@cislovany=false()]">
+        <ul>
+            <xsl:apply-templates select="polozka" />
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="zoznam[@cislovany=true()]">
+        <ol>
+            <xsl:apply-templates select="polozka" />
+        </ol>
     </xsl:template>
 
 </xsl:stylesheet>
