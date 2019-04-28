@@ -3,6 +3,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format">
     <xsl:output method="xml" indent="yes"/>
+    <xsl:param name="parametre" select="document('parametre.xml')" />
 
     <xsl:template match="/">
         <fo:root>
@@ -37,6 +38,14 @@
 
         <xsl:apply-templates select="slajdy"/>
 
+        <fo:page-sequence master-reference="prvy-slajd">
+            <fo:flow flow-name="xsl-region-body" text-align="center">
+                <fo:block font="bold 60pt Arial">
+                    <xsl:value-of select="//zaver"/>
+                </fo:block>
+            </fo:flow>
+        </fo:page-sequence>
+
     </xsl:template>
 
     <xsl:template match="slajdy">
@@ -50,7 +59,7 @@
                     <xsl:value-of select="@nazov"/>
                 </fo:block>
             </fo:static-content>
-            <fo:flow flow-name="xsl-region-body" font="24pt Courier New">
+            <fo:flow flow-name="xsl-region-body" font="24pt {$parametre//pismo}">
                 <fo:block>
                     <xsl:apply-templates/>
                 </fo:block>
@@ -70,7 +79,7 @@
     <xsl:template match="polozka[../@cislovany=false()]">
         <fo:list-item>
             <fo:list-item-label end-indent="20pt">
-                <fo:block>-</fo:block>
+                <fo:block><xsl:value-of select="$parametre//znak-zoznamu" /></fo:block>
             </fo:list-item-label>
             <fo:list-item-body start-indent="20pt">
                 <fo:block>

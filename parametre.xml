@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<parametre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="parametre.xsd">
+    <znak-zoznamu>►</znak-zoznamu> <!-- znak na zaciatku polozky necislovaneho zoznamu -->
+    <pismo>monospace</pismo> <!-- nazov rodiny pisem - vyzaduje mat spravne definovanu rodinu v xep.xml -->
+</parametre>

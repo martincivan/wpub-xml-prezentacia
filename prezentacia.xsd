@@ -8,6 +8,7 @@
                 <xs:element name="nadpis" type="xs:string"/>
                 <xs:element name="podnadpis" type="xs:string"/>
                 <xs:element name="autor" type="xs:string"/>
+                <xs:element name="zaver" type="xs:string"/>
                 <xs:element name="slajdy" type="slajdy"/>
             </xs:sequence>
         </xs:complexType>
