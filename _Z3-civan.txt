@@ -1,4 +1,4 @@
-generujHtml.sh, generujPDF.sh - bashové skripty na preklad, v podstate len spúšťajú SAXON alebo XEP so vstupnou prezentáciou a príslušnou šablónou
+generujHtml.sh, generujPDF.sh - skripty na preklad, v podstate len spúšťajú SAXON alebo XEP so vstupnou prezentáciou a príslušnou šablónou
 výstup vygenerujú do priečinka vystup, kde sa očakávajú aj vstupné obrázky a HTML CSS štýl
 
 V prípade, že nefunguje diakritika v PDF treba overiť či má XEP inštalácia v xep.xml nastavené správne TTF fonty.
