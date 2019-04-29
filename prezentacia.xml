@@ -44,8 +44,8 @@
             Môže obsahovať nasledovné veci:
             <zoznam>
                 <polozka>Text</polozka>
-                <polozka>element obrázok s atribútom kde, v ktorom je cesta k obrázku</polozka>
-                <polozka>element(y) zoznam, ktorý môže obsahovať atribút cislovany="true"</polozka>
+                <polozka>Element obrázok s atribútom kde, v ktorom je cesta k obrázku</polozka>
+                <polozka>Element(y) zoznam, ktorý môže obsahovať atribút cislovany="true"</polozka>
                 <polozka>Každý zoznam obsahuje elementy polozka</polozka>
             </zoznam>
         </slajd>
